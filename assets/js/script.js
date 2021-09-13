@@ -2,7 +2,7 @@
 var body = document.body;
 
 const heading = document.createElement('h5');
-heading.textContent = 'View high scores';
+heading.textContent = 'View high scores'; 
 heading.setAttribute('style', 'color: #ff00ff;')
 document.body.appendChild(heading);
 
@@ -54,6 +54,38 @@ var questions = [
         question: 'Commonly used data types Do Not Include:',
         choice: ['strings', 'booleans', 'alerts', 'numbers'],
         answer: 'alerts'
+    },
+];
+
+var questions = [
+    {
+        question: 'The condition in an if/else statement is enclosed with____________.',
+        choice: ['quotes', 'curly brackets', 'parenthesis', 'square brackets'],
+        answer: 'parenthesis'
+    },
+];
+
+var questions = [
+    {
+        question: 'Arrays in JavaScript can be used to store ____________.',
+        choice: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+        answer: 'all of the above'
+    },
+];
+
+var questions = [
+    {
+        question: 'string values must be enclosed within__________ when being assigned to variables.',
+        choice: ['commas', 'curly brackets', 'quotes', 'parenthesis'],
+        answer: 'quotes'
+    },
+];
+
+var questions = [
+    {
+        question: 'A very usful tool used during development and debugging for printing content to the debugger is:',
+        choice: ['JavaScript', 'terminal/bash', 'for loops', 'console.log'],
+        answer: 'console.log'
     },
 ];
 // TODO: Create a variable to keep track of the score
