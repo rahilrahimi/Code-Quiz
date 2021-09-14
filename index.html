@@ -7,19 +7,20 @@
     <title>Code-Quiz</title>
   </head>
   <body>
-     <div id="timer">
-      <h3>Time</h3>
-    </div> 
+<!--set timer & start quiz btn-->
+<div id="clock" role="timer" aria-live="off">90</div>
+
+<button onclick="startQuiz('clock')">start Quiz</button>
+
     <div>
       <main class="start" id = "start-screen"></main>
     </div>
-      <div>
-        <button id="start-btn">Start Quiz</button>
-      </div>
+
       <div class="hide" id="questions">
         <h2 id="question-title"></h2>
         <div id ="question-choice"></div>
       </div>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

@@ -29,6 +29,7 @@ h3El.textContent =
 h3El.setAttribute('style', 'margin:auto; width:100%; text-align:center;');
 body.appendChild(h3El);
 
+
 // The array of questions
 var questionsEl = document.getElementById("questions");
 var choicesEl = document.getElementById("question-choice");
@@ -37,17 +38,31 @@ var timerEl = document.getElementById("timer");
 
 
 
-//add event Listener to start button to initialize quiz
-buttonEl.addEventListener("click", startQuiz);
 //function to start the quiz
 function startQuiz() {
     var startScreen = document.getElementById("start-screen");
     startScreen.setAttribute("style", "display:none");
 }
 
-//timer 
-//
+//timer & start quiz-btn
 
+/* basic JavaScript to update a timer */
+function startQuiz(timerName) {
+    // get the number of seconds
+     let timer = document.getElementById(timerName),
+         seconds = parseInt(timer.innerText);
+    // remove a second
+    // updated the content of timer
+     timer.innerText = --seconds
+    // if timer != 0, setTimeout
+    if (seconds) {
+      setTimeout( function() {
+        startQuiz(timerName);
+      }, 1000);
+    }
+  }
+  
+ 
 // TODO: Create an array with five question objects
 var questions = [
     {
@@ -88,6 +103,24 @@ var questions = [
         answer: 'console.log'
     },
 ];
+
+var score =0;
+
+for (var i = 0; i < questions.length; i++) {
+    var answer = choice(questions[i].q);
+
+    if (
+        (answer === true && questions[i].a === 'Correct!') ||
+        (answer === false && questions[i].a === 'Wrong!')
+    ) {
+        //increase score
+        score++;
+        //alert the user
+        alert('Correct!');
+    } else {
+        alert('Wrong!');
+    }
+}
 // TODO: Create a variable to keep track of the score
 
 // TODO: Iterate over the questions array and display each question in a confirmation box
