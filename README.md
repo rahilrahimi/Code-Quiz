@@ -9,7 +9,7 @@ A timed coding quiz with multiple-choice questions.
 * CSS
 * JavaScript
 ## Website
-https://lernantino.github.io/run-buddy/
+https://rahilrahimi.github.io/Code-Quiz/
 
 ## Contribution
 Made with ❤️ by [RAHIL.D]
