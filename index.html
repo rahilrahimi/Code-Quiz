@@ -1,26 +1,68 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Code-Quiz</title>
-  </head>
-  <body>
-<!--set timer & start quiz btn-->
-<div id="clock" role="timer" aria-live="off">90</div>
-
-<button onclick="startQuiz('clock')">start Quiz</button>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
     <div>
-      <main class="start" id = "start-screen"></main>
+        <h3 id="viewScore">View high scores</h3>
     </div>
-
-      <div class="hide" id="questions">
-        <h2 id="question-title"></h2>
-        <div id ="question-choice"></div>
-      </div>
-
-    <script src="./assets/js/script.js"></script>
-  </body>
+    <div>
+        <h3 id="countdown">
+            Time:
+            <span id="presentPeriod"></span>
+        </h3>
+    </div>
+    <div id="cover" style="display: none">
+        <div id="preface">
+            <h1>Coding Quiz</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <!-- play button-->
+            <button id="playGame">Start Quiz</button>
+        </div>
+        <!-- unordered HTML list (questions and options)-->
+        <div id="content">
+            <h1 id="Tag">question title</h1>
+            <ul id="Option">
+                <li>choice 1</li>
+                <li>choice 2</li>
+                <li>choice 3</li>
+                <li>choice 4</li>
+            </ul>
+            <!-- answers t/f-->
+            <div class="answer" id="true">
+                Correct!
+            </div>
+            <div class="answer" id="false">
+                Wrong!
+            </div>
+        </div>
+        <!-- sign and submition,and scors -->
+        <div id="signature">
+            <h1>All done!</h1>
+            <p>Your final score is
+                <span id="result">22</span>
+            </p>
+            <p>
+                <label>
+                    Enter initials:
+                    <input id="mark">
+                </label>
+                <button id="giveIn">Submit</button>
+            </p>
+        </div>
+        <!-- startOver and clear localstorage -->
+        <div id="rates">
+        <h1>Highscores</h1>
+            <ul id="text"></ul>
+            <button id="startOver">Go Back</button>
+            <button id="erase" value="reset">Clear Highscore</button>
+        </div>
+    </div>
+<script src="./assets/script.js"></script>
+</body>
 </html>
