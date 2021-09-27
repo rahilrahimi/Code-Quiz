@@ -8,9 +8,6 @@ A typical coding assessment is a combination of multiple-choice questions and in
 * CSS
 * JavaScript
 
-## screenshot of website
-![alt text](assets/quiz.png)
-
 ## Website
 https://rahilrahimi.github.io/Code-Quiz/
 
